@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>DRILL INDEX · 音游键型训练库</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="多音游键型训练库：8 款主流音游的判定系统与键型演示">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DRILL INDEX">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="stylesheet" href="src/theme.css">
+<link rel="stylesheet" href="src/app.css">
+</head>
+<body>
+
+<header class="appbar">
+  <div id="barLeft"></div>
+  <div class="appbar-title" id="barTitle"></div>
+  <div id="barRight"></div>
+</header>
+
+<div class="searchwrap" id="searchwrap">
+  <div class="searchbox">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>
+    <input id="q" type="search" placeholder="检索音游、键型、玩家黑话…" autocomplete="off" enterkeyhint="search">
+  </div>
+  <div class="searchhint">支持「双押」「蛇」「滑键」「散打」等玩家叫法，跨全部音游检索</div>
+</div>
+
+<main class="view" id="view"></main>
+
+<!-- 底部导航：首页 / 训练 / 图鉴 / 我的 -->
+<nav class="tabbar" id="tabbar" aria-label="主导航">
+  <button class="tab" data-tab="home" data-go="#/" aria-label="首页">
+    <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.4 12 3.6l8 6.8V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></svg></span>
+    <span class="tl">首页</span>
+  </button>
+  <button class="tab" data-tab="train" data-go="#/train" aria-label="训练">
+    <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="3.4"/><circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/></svg></span>
+    <span class="tl">训练</span>
+  </button>
+  <button class="tab" data-tab="codex" data-go="#/codex" aria-label="图鉴">
+    <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.6C10.4 5.1 8.4 4.3 5.8 4.3v13.5c2.6 0 4.6.8 6.2 2.3 1.6-1.5 3.6-2.3 6.2-2.3V4.3c-2.6 0-4.6.8-6.2 2.3z"/><path d="M12 6.6v13.5"/></svg></span>
+    <span class="tl">图鉴</span>
+  </button>
+  <button class="tab" data-tab="me" data-go="#/me" aria-label="我的">
+    <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.7"/><path d="M4.9 20.2c0-3.5 3.2-5.9 7.1-5.9s7.1 2.4 7.1 5.9"/></svg></span>
+    <span class="tl">我的</span>
+  </button>
+</nav>
+
+<script src="src/data/games.js"></script>
+<script src="src/data/topics.js"></script>
+<script src="src/player.js"></script>
+<script src="src/play.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# 临时/本地产物
+_shot.html
+__verify.html
+.DS_Store
+Thumbs.db
+__pycache__/

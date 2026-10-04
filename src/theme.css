@@ -1,0 +1,80 @@
+/* ============================================================
+   DRILL INDEX · 设计令牌
+   重新设计 UI 时改这一个文件即可，组件样式会自动跟随。
+   ============================================================ */
+:root {
+  color-scheme: dark;
+
+  /* ---- 表面与文字 ---- */
+  --bg:          #111111;   /* 应用底色 */
+  --surface:     #1B1B1B;   /* 卡片 */
+  --surface-2:   #232323;   /* 次级卡片 / 控件底 */
+  --surface-3:   #2C2C2C;   /* 按下态 */
+  --line:        #2A2A2A;   /* 分隔线 */
+  --line-strong: #3A3A3A;   /* 控件描边 */
+  --fg:          #FFFFFF;
+  --fg-2:        #B4B4B4;   /* 次要文字 */
+  --fg-3:        #7E7E7E;   /* 弱化文字 */
+
+  /* ---- 强调色（每款音游进入其视图时由 JS 覆写） ---- */
+  --accent:      #9EFF00;
+  --accent-ink:  #111111;   /* 压在强调色上的文字 */
+
+  /* ---- 圆角 ---- */
+  --r-s: 10px;
+  --r-m: 14px;
+  --r-l: 20px;
+  --r-pill: 999px;
+
+  /* ---- 间距（4 的倍数） ---- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-7: 32px;
+
+  /* ---- 字号 / 行高 ---- */
+  --fs-display: 26px;
+  --fs-title:   20px;
+  --fs-head:    17px;
+  --fs-body:    15px;
+  --fs-cap:     12.5px;
+  --fs-micro:   11px;
+  --lh-tight:   1.25;
+  --lh-normal:  1.6;
+
+  /* ---- 字体 ---- */
+  --font: "Inter", "Segoe UI", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+
+  /* ---- 布局 ---- */
+  --bar-h:   54px;                       /* 顶栏高度 */
+  --tab-h:   56px;                       /* 底部导航栏高度 */
+  --safe-t:  env(safe-area-inset-top, 0px);
+  --safe-b:  env(safe-area-inset-bottom, 0px);
+  --safe-l:  env(safe-area-inset-left, 0px);
+  --safe-r:  env(safe-area-inset-right, 0px);
+  --tap-min: 44px;                       /* 最小可点区域 */
+
+  /* ---- 动效 ---- */
+  --ease: cubic-bezier(.22, .61, .36, 1);
+  --dur:  .22s;
+
+  /* ---- 阴影 ---- */
+  --shadow-bar: 0 1px 0 var(--line);
+  --shadow-card: 0 2px 14px rgba(0, 0, 0, .35);
+}
+
+/* 系统偏好减少动效时全部关掉（也可由「我的」里的开关手动开启） */
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 1ms; }
+}
+html.no-anim { --dur: 1ms; }
+html.no-anim .anim, html.no-anim .anim-d1, html.no-anim .anim-d2 { animation: none; }
+
+/* 「我的」里的大字号开关 */
+html.big-type {
+  --fs-display: 30px;
+  --fs-title:   23px;
+  --fs-head:    19px;
+  --fs-body:    17px;
+  --fs-cap:     14px;
+  --fs-micro:   12.5px;
+}
